@@ -1,0 +1,20 @@
+<?php
+// $Id:$
+
+/**
+ * Implementation of hook_enable()
+ */
+function eparser_zerocategory_enable() {
+  //clear the cache to display in FeedsAPI EParser as available plugin.
+  cache_clear_all('plugins:eparse:type_plugins', 'cache');
+  cache_clear_all('ctools_plugin_files:eparse:type_plugins', 'cache');
+}
+
+/**
+ * Implementation of hook_disable()
+ */
+function eparser_zerocategory_disable() {
+  //clear the cache to display in FeedsAPI EParser as available plugin.
+  cache_clear_all('plugins:eparse:type_plugins', 'cache');
+  cache_clear_all('ctools_plugin_files:eparse:type_plugins', 'cache');
+}

@@ -1,0 +1,20 @@
+<?php
+// $Id:$
+
+function eparser_zerocategory_eparse_namespace_plugins() {
+  $base_path = drupal_get_path('module', 'eparser_zerocategory') . '/plugins';
+  return array(
+    'zerocategory' => array(
+      'url' => 'http://backend.userland.com/RSS2',
+      'name' => 'RSS2 ZeroCategory',
+      'description' => 'Parses RSS category and returns only first one (with id 0).',
+      'handler' => array(
+        'class' => 'FeedapiEparserNamespaceZeroCategory',
+        'parent' => 'base',
+      ),
+      'system' => FALSE,
+      'path' => $base_path,
+    ),
+  );
+}
+

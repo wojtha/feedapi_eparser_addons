@@ -1,0 +1,35 @@
+<?php
+// $Id:$
+
+function eparser_youtube_eparse_type_plugins() {
+  $base_path = drupal_get_path('module', 'eparser_youtube') . '/plugins';
+  return array(
+    'youtube' => array(
+      'name' => 'youtube',
+      'description' => 'Parses Youtube',
+      'handler' => array(
+        'class' => 'FeedapiEparserTypeYoutube',
+        'parent' => 'xml',
+      ),
+      'system' => FALSE,
+      'path' => $base_path,
+    ),
+  );
+}
+
+function eparser_youtube_eparse_namespace_plugins() {
+  $base_path = drupal_get_path('module', 'eparser_youtube') . '/plugins';
+  return array(
+    'youtube' => array(
+      'name' => 'youtube',
+      'description' => 'Parses Youtube',
+      'handler' => array(
+        'class' => 'FeedapiEparserNamespaceYoutube',
+        'parent' => 'base',
+      ),
+      'system' => FALSE,
+      'path' => $base_path,
+    ),
+  );
+}
+

@@ -1,0 +1,35 @@
+<?php
+// $Id:$
+
+function eparser_slideshare_eparse_type_plugins() {
+  $base_path = drupal_get_path('module', 'eparser_slideshare') . '/plugins';
+  return array(
+    'slideshare' => array(
+      'name' => 'slideshare',
+      'description' => 'Parses slideshare',
+      'handler' => array(
+        'class' => 'FeedapiEparserTypeSlideshare',
+        'parent' => 'xml',
+      ),
+      'system' => FALSE,
+      'path' => $base_path,
+    ),
+  );
+}
+
+function eparser_slideshare_eparse_namespace_plugins() {
+  $base_path = drupal_get_path('module', 'eparser_slideshare') . '/plugins';
+  return array(
+    'slideshare' => array(
+      'name' => 'slideshare',
+      'description' => 'Parses slideshare',
+      'handler' => array(
+        'class' => 'FeedapiEparserNamespaceSlideshare',
+        'parent' => 'base',
+      ),
+      'system' => FALSE,
+      'path' => $base_path,
+    ),
+  );
+}
+

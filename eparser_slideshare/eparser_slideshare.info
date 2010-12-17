@@ -1,0 +1,6 @@
+; $Id:$
+name = Slideshare Eparser
+description = Special RSS Handling
+package = FeedAPI Add On
+core = 6.x
+dependencies[] = feedapi_eparser
